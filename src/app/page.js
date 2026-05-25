@@ -1,9 +1,12 @@
 import Menu from "@/components/Menu/Menu";
+import Publication from "@/components/Publication/Publication";
 
 export default function Home() {
   return (
-    <main>
+    <main className="w-3/5 py-20 flex flex-col justify-center items-center">
       <Menu />
+      <Publication />
+      <Publication />
     </main>
   );
 }

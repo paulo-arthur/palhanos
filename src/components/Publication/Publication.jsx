@@ -1,6 +1,6 @@
 export default function Publication() {
     return (
-        <article>
+        <article className="w-full">
             <div>
                 <h1>Lorem Ipsum</h1>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt sequi nihil iste, porro.</p>
