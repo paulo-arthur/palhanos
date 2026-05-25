@@ -1,6 +1,6 @@
 export default function Menu() {    
     return (
-        <main className="w-full border-b border-solid border-gray-900">
+        <main className="w-full border-b border-solid border-gray-800 mb-12">
             <h1 className="text-base md:text-2xl">palhanos</h1>
             <p className="w-2/3 text-gray-500 my-3">
                 Documentando meu aprendizado em forma de blog/portfólio. Notas do que estudo, aprendo e construo.</p>
