@@ -3,7 +3,7 @@ import Publication from "@/components/Publication/Publication";
 
 export default function Home() {
   return (
-    <main className="w-3/5 py-20 flex flex-col justify-center items-center">
+    <main className="w-3/5 flex flex-col justify-center items-center">
       <Menu />
       <Publication />
       <Publication />
