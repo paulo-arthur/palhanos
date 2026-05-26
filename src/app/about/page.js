@@ -17,5 +17,5 @@ export default function AboutPage() {
                 </p>
             </article>
         </main>
-    );
+    );  
 }
