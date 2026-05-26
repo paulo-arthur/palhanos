@@ -6,7 +6,7 @@ export default function Publication({data}) {
         <article className="w-full flex justify-between my-5 pb-5 border-b border-solid border-gray-800">
             <div>
                 <h1 className="text-base md:text-lg hover:text-emerald-600">
-                    <Link href="#" className="">
+                    <Link href={`/posts/${data.slug}`} className="">
                         {data.title}
                     </Link>
                 </h1>
