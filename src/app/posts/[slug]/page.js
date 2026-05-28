@@ -254,7 +254,7 @@ export default async function PostPage({params}) {
                         </code>
                     ),
 
-                    code: ({ children }) => (
+                    pre: ({ children }) => (
 
                         <pre className="
                             bg-zinc-900
@@ -265,16 +265,20 @@ export default async function PostPage({params}) {
                             overflow-x-auto
                             my-8
                         ">
-
-                            <code className="
-                                text-zinc-200
-                                text-sm
-                                leading-7
-                            ">
-                                {children}
-                            </code>
-
+                            {children}
                         </pre>
+                    ),
+
+                    code: ({ children }) => (
+
+                        <code className="
+                            text-zinc-200
+                            text-sm
+                            leading-7
+                            font-mono
+                        ">
+                            {children}
+                        </code>
                     )
                 }}
 
