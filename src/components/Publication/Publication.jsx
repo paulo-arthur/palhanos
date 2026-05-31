@@ -1,7 +1,6 @@
 import Link from "next/link";
 
 export default function Publication({data}) {
-    console.log(data)
     return (
         <article className="w-full flex justify-between my-5 pb-5 border-b border-solid border-gray-800">
             <div>

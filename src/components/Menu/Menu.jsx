@@ -9,7 +9,7 @@ export default function Menu() {
             <nav className="w-full mt-14 mb-5">
                 <ul className="flex justify-start">
                     <li className="mr-5"><Link className="hover:text-emerald-600" href="/">Explorar</Link></li>
-                    <li className="mr-5"><Link className="hover:text-emerald-600" href="#">Tópicos</Link></li>
+                    <li className="mr-5"><Link className="hover:text-emerald-600" href="/explore">Tópicos</Link></li>
                     <li className="mr-5"><Link className="hover:text-emerald-600" href="/about">Sobre</Link></li>
                 </ul>
             </nav>
