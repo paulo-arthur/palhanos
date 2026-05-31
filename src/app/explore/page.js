@@ -4,7 +4,6 @@ import Topic from "@/components/Topic/Topic";
 
 export default function explorePage() {
     const topics = getTopics();
-    console.log(Object.entries(topics));
     return (
         <main className="w-3/5 flex flex-col justify-center">
             <Menu />
