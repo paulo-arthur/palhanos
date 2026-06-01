@@ -2,7 +2,7 @@
 title: Selection Sort
 subtitle: Algoritmo de ordenação simples.
 tags: [algoritmos, ordenação]
-date: 01/06/2026
+date: 01/06/26
 ---
 
 # Selection Sort
