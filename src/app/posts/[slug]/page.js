@@ -6,7 +6,7 @@ export default async function PostPage({params}) {
     const { slug } = await params;
     const data = getPostData(slug);
     return (
-        <main className="w-3/5">
+        <main className="w-4/5 md:w-3/5">
             <Menu />
             <ReactMarkdown
                 components={{
@@ -14,7 +14,8 @@ export default async function PostPage({params}) {
                     h1: ({ children }) => (
 
                         <h1 className="
-                            text-5xl
+                            text-3xl
+                            md:text-5xl
                             font-bold
                             mt-16
                             mb-8
@@ -28,7 +29,8 @@ export default async function PostPage({params}) {
                     h2: ({ children }) => (
 
                         <h2 className="
-                            text-4xl
+                            text-2xl
+                            md:text-4xl
                             font-semibold
                             mt-14
                             mb-6
@@ -41,7 +43,8 @@ export default async function PostPage({params}) {
                     h3: ({ children }) => (
 
                         <h3 className="
-                            text-3xl
+                            text-xl
+                            md:text-3xl
                             font-semibold
                             mt-12
                             mb-4
@@ -54,7 +57,8 @@ export default async function PostPage({params}) {
                     h4: ({ children }) => (
 
                         <h4 className="
-                            text-2xl
+                            text-base
+                            md:text-2xl
                             font-medium
                             mt-10
                             mb-4
@@ -69,7 +73,8 @@ export default async function PostPage({params}) {
                         <p className="
                             text-zinc-300
                             leading-8
-                            text-lg
+                            text-base
+                            md:text-lg
                             mb-6
                         ">
                             {children}
@@ -118,6 +123,7 @@ export default async function PostPage({params}) {
                             pl-8
                             mb-6
                             space-y-3
+                            text-sm
                             text-zinc-300
                         ">
                             {children}

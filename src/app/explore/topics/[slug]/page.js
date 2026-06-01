@@ -7,7 +7,7 @@ export default async function TopicPage({params}) {
     const posts = getPostsMetadata();
 
     return (
-        <main className="w-3/5 flex flex-col justify-center">
+        <main className="w-4/5 md:w-3/5 flex flex-col justify-center">
             <Menu />
             {posts.map((post) => {
                 return (

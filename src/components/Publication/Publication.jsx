@@ -9,7 +9,7 @@ export default function Publication({data}) {
                         {data.title}
                     </Link>
                 </h1>
-                <p className=" my-2 text-xs md:text-sm text-gray-500">
+                <p className=" my-2 text-sm md:text-base text-gray-500">
                     {data.subtitle}
                 </p>
                 <div className="flex justify-start">
@@ -21,7 +21,7 @@ export default function Publication({data}) {
                 </div>
             </div>
 
-            <time className="text-gray-500 text-xs md:text-sm">2026-05-26</time>
+            <time className="my-auto text-gray-500 text-xs">{data.date}</time>
         </article>
     );
 }

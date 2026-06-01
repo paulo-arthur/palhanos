@@ -2,7 +2,7 @@ import Menu from "@/components/Menu/Menu";
 
 export default function AboutPage() {
     return (
-        <main className="w-3/5 flex flex-col justify-center">
+        <main className="w-4/5 md:w-3/5 flex flex-col justify-center">
             <Menu />
             <article className="">
                 <h1 className="text-base md:text-2xl">Sobre</h1>

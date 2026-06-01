@@ -2,7 +2,7 @@
 title: Big O Notation - Fundamentos e Teoria
 subtitle: Como mensurar a escalabilidade e eficiência de algoritmos.
 tags: [algoritmos]
-date: 27-05-2026
+date: 27/05/26
 ---
 
 # Big O Notation

@@ -3,8 +3,8 @@ import Link from "next/link";
 export default function Menu() {    
     return (
         <main className="w-full border-b border-solid border-gray-800 mt-20 mb-12">
-            <h1 className="text-base md:text-2xl">palhanos</h1>
-            <p className="w-2/3 text-gray-500 my-3">
+            <h1 className="text-xl md:text-2xl">palhanos</h1>
+            <p className="md:w-2/3 text-gray-500 my-3">
                 Documentando meu aprendizado em forma de blog/portfólio. Notas do que estudo, aprendo e construo.</p>
             <nav className="w-full mt-14 mb-5">
                 <ul className="flex justify-start">
