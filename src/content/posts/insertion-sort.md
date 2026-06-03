@@ -1,7 +1,7 @@
 ---
 title: Insertion Sort
 subtitle: Algoritmo de ordenação do Paciência
-tags: [algoritmo, ordenação]
+tags: [algoritmos, ordenação]
 date: 01/06/26
 ---
 
