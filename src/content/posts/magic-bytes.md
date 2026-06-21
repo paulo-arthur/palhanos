@@ -16,17 +16,22 @@ Arquivos são a base de qualquer sistema operacional comum, e por isso amplament
 
 ## Exemplos Práticos
 Veja o *header* de alguns tipos comuns de arquivos:
-- **JPEG**
-    ```ffd8 ffe0 0010 4a46 4946 0001 0001 0048```
+- **JPEG**  
+    ```ffd8 ffe0 0010 4a46 4946 0001 0001 0048```  
     O `ffd8` é uma assinatura clássica de JPEGs.
 
-- **PNG**
-    ```8950 4e47 0d0a 1a0a 0000 000d 4948 4452```
+- **PNG**  
+    ```8950 4e47 0d0a 1a0a 0000 000d 4948 4452```  
     O `50 4e 47` significa literalmente PNG.
 
-- **PDF**
-    ```2550 4446 2d31 2e35 0d0a 25b5 b5b5 b50d```
+- **PDF**  
+    ```2550 4446 2d31 2e35 0d0a 25b5 b5b5 b50d```  
     PDFs iniciam com `25 50 44 46`.
 
 ## Aplicações
 Com essa leitura direta dos *bytes* do arquivo, é possível detectar executáveis mal intencionado dentro de arquivos de alto compartilhamento, como PDFs, planilhas e *PowerPoints*. Também é possível analisar se um arquivo foi corrompido ou não utilizando ferramentas que analisam a integridade nos padrões dos dados crus. Aplicações substanciais para a cibersegurança.
+
+## Princípios da Análise Forense
+Quando estamos trabalhando com arquivos suspeitos, existem algumas regras importantes a fim de garantir um processo eficaz e seguro:
+- Cópia de Segurança: Deve-se sempre criar uma cópia do arquivo original a fim de preservar sua integridade e poder trabalhar livremente em cima da cópia criada.
+- Ambiente Virtual: Naturalmente, não faz sentido abrir um arquivo com suspeitas de conter scripts maliciosos embutidos no seu computador pessoal. Um ambiente virtual seguro e controlado é o ideal.
