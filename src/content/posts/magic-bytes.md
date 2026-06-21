@@ -30,24 +30,3 @@ Veja o *header* de alguns tipos comuns de arquivos:
 
 ## Aplicações
 Com essa leitura direta dos *bytes* do arquivo, é possível detectar executáveis mal intencionado dentro de arquivos de alto compartilhamento, como PDFs, planilhas e *PowerPoints*. Também é possível analisar se um arquivo foi corrompido ou não utilizando ferramentas que analisam a integridade nos padrões dos dados crus. Aplicações substanciais para a cibersegurança.
-
-## Assinaturas
-| Extensão | Tipo de Arquivo | Magic Bytes (Hex) | Representação ASCII / Descrição |
-| :--- | :--- | :--- | :--- |
-| `.exe`, `.dll`, `.sys` | Executável Windows (PE) | `4D 5A` | `MZ` (Mark Zbikowski) |
-| `.elf` | Executável Linux / Unix | `7F 45 4C 46` | `.ELF` |
-| `.png` | Imagem PNG | `89 50 4E 47 0D 0A 1A 0A` | `.PNG....` |
-| `.jpg`, `.jpeg` | Imagem JPEG | `FF D8 FF` | Início de imagem (SOI) |
-| `.gif` | Imagem GIF | `47 49 46 38 37 61` ou `47 49 46 38 39 61` | `GIF87a` ou `GIF89a` |
-| `.pdf` | Documento PDF | `25 50 44 46` | `%PDF` |
-| `.zip` | Arquivo Compactado ZIP | `50 4B 03 04` | `PK..` (Phil Katz) |
-| `.rar` | Arquivo Compactado RAR | `52 61 72 21 1A 07 00` | `Rar!` |
-| `.docx`, `.xlsx`, `.pptx` | Documentos Office Modernos | `50 4B 03 04` | `PK..` (Assinatura de ZIP) |
-| `.doc`, `.xls`, `.ppt` | Documentos Office Antigos | `D0 CF 11 E0 A1 B1 1A E1` | Arquivo Composto OLE |
-| `.mp3` | Áudio MP3 | `49 44 33` | `ID3` |
-| `.mp4` | Vídeo MP4 | `00 00 00 18 66 74 79 70 6D 70 34 32` | `....ftypmp42` |
-| `.7z` | Arquivo Compactado 7-Zip | `37 7A BC AF 27 1C` | `7z¼¯'.` |
-| `.tar.gz` | Arquivo Gzip | `1F 8B` | Identificador Gzip |
-| `.bmp` | Imagem Bitmap | `42 4D` | `BM` |
-| `.class` | Bytecode Java compilado | `CA FE BA BE` | `CAFEBABE` |
-Fonte: Gemini Pro
