@@ -32,7 +32,7 @@ Veja o *header* de alguns tipos comuns de arquivos:
 Com essa leitura direta dos *bytes* do arquivo, é possível detectar executáveis mal intencionado dentro de arquivos de alto compartilhamento, como PDFs, planilhas e *PowerPoints*. Também é possível analisar se um arquivo foi corrompido ou não utilizando ferramentas que analisam a integridade nos padrões dos dados crus. Aplicações substanciais para a cibersegurança.
 
 ## Assinaturas
-| Extensão | Tipo de Arquivo | Magic Bytes (Hexadecimal) | Representação ASCII / Descrição |
+| Extensão | Tipo de Arquivo | Magic Bytes (Hex) | Representação ASCII / Descrição |
 | :--- | :--- | :--- | :--- |
 | `.exe`, `.dll`, `.sys` | Executável Windows (PE) | `4D 5A` | `MZ` (Mark Zbikowski) |
 | `.elf` | Executável Linux / Unix | `7F 45 4C 46` | `.ELF` |
@@ -41,13 +41,13 @@ Com essa leitura direta dos *bytes* do arquivo, é possível detectar executáve
 | `.gif` | Imagem GIF | `47 49 46 38 37 61` ou `47 49 46 38 39 61` | `GIF87a` ou `GIF89a` |
 | `.pdf` | Documento PDF | `25 50 44 46` | `%PDF` |
 | `.zip` | Arquivo Compactado ZIP | `50 4B 03 04` | `PK..` (Phil Katz) |
-| `.rar` | Arquivo Compactado RAR | `52 61 72 21 1A 07 00` ou `52 61 72 21 1A 07 01 00` | `Rar!` |
-| `.docx`, `.xlsx`, `.pptx` | Documentos Office Modernos | `50 4B 03 04` | `PK..` (Mesma assinatura do ZIP corporativo) |
-| `.doc`, `.xls`, `.ppt` | Documentos Office Antigos (97-2003) | `D0 CF 11 E0 A1 B1 1A E1` | Arquivo Composto OLE (Microsoft Office) |
-| `.mp3` | Áudio MP3 (com tag ID3v2) | `49 44 33` | `ID3` |
+| `.rar` | Arquivo Compactado RAR | `52 61 72 21 1A 07 00` | `Rar!` |
+| `.docx`, `.xlsx`, `.pptx` | Documentos Office Modernos | `50 4B 03 04` | `PK..` (Assinatura de ZIP) |
+| `.doc`, `.xls`, `.ppt` | Documentos Office Antigos | `D0 CF 11 E0 A1 B1 1A E1` | Arquivo Composto OLE |
+| `.mp3` | Áudio MP3 | `49 44 33` | `ID3` |
 | `.mp4` | Vídeo MP4 | `00 00 00 18 66 74 79 70 6D 70 34 32` | `....ftypmp42` |
 | `.7z` | Arquivo Compactado 7-Zip | `37 7A BC AF 27 1C` | `7z¼¯'.` |
-| `.tar.gz` | Arquivo Gzip | `1F 8B` | Identificador de compressão Gzip |
+| `.tar.gz` | Arquivo Gzip | `1F 8B` | Identificador Gzip |
 | `.bmp` | Imagem Bitmap | `42 4D` | `BM` |
-| `.class` | Bytecode Java compiled | `CA FE BA BE` | `CAFEBABE` (Assinatura clássica) |
+| `.class` | Bytecode Java compilado | `CA FE BA BE` | `CAFEBABE` |
 Fonte: Gemini Pro
