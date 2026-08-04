@@ -1,7 +1,7 @@
 ---
 title: SQL Injection
 subtitle: 
-tags: [redes]
+tags: [vulnerabilidades]
 date: 16/07/26
 ---
 
@@ -22,4 +22,28 @@ Um ataque popular que se aproveita de uma má sanitização dos campos de input 
   `' OR 1=1--`
 
 ## Detectando a vulnerabilidade
-Uma boa forma de verificar se uma aplicação é vulnerável a SQLi, por mais raras que sejam atualmente, é verificar a resposta do servidor com um parâmetro comum em com um parâmetro adulterado. Se o segundo caso exceder o tempo limite ou retornar algum erro diferente, significa que a aplicação está se comportanto de forma extraordinária frente a uma query modificada, indicando uma possível falha de segurança.
+Para mapear uma aplicação em busca dessa vulnerabilidade, deve-se entender que dividimos de duas formas:
+
+1. **Black Box**: Quando não se tem acesso ao código-fonte;
+2. **White Box**: Quando se tem acesso ao código-fonte;
+
+### Black Box
+**1. Mapeamento de Pontos de Entrada (Superfície de Ataque):**
+
+  O primeiro passo é mapear todos os parâmetros de entrada que enviam dados para o backend:
+
+  * Parâmetros HTTP GET e POST: Campos de formulários (login, busca, cadastro), parâmetros de URL (?id=1, ?category=books).
+
+  * Headers HTTP: Cabeçalhos frequentemente armazenados em banco de dados para logs ou métricas, como User-Agent, Referer, X-Forwarded-For e cookies de sessão.
+
+  * APIs (REST/GraphQL): Payloads JSON ou XML enviados via POST, PUT ou PATCH.
+
+**2. Análise Dinâmica e Testes de Comportamento (DAST)**
+
+  Na análise dinâmica em ambientes de teste autorizados, avalia-se como o servidor responde a caracteres especiais e estruturas sintáticas de banco de dados:
+
+   * Injeção de Caracteres de Controle: Envio de caracteres como ', ", ;, -- ou /* para verificar se a aplicação retorna erros de sintaxe de banco de dados (SQLi Baseado em Erro).
+
+   * Testes Lógicos (Boolean-based): Envio de condições verdadeiras e falsas (ex: ' OR '1'='1 vs ' OR '1'='2) para observar alterações no tempo de resposta ou no conteúdo retornado pela página.
+
+   * Testes de Tempo (Time-based): Injeção de funções de atraso específicas do SGBD (ex: SLEEP() no MySQL, pg_sleep() no PostgreSQL) para identificar execuções assíncronas ou cegas (Blind SQLi).
