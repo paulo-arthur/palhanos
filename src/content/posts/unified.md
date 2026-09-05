@@ -1,5 +1,5 @@
 ---
-title: HackTheBox: Unified
+title: HackTheBox Unified
 subtitle: Relatório da resolução da máquina Unified do site HackTheBox
 tags: [ctf]
 date: 05/09/26
